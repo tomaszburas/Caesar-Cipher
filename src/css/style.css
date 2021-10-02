@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
+@import url('./reset.css');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f4f1de;
+    color: #3d405b;
+}
+
+.mainHeader {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem 0;
+}
+
+main {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.provideData {
+    margin: 2rem 0;
+    width: 80%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #e07a5f;
+    border-radius: .5rem;
+}
+
+.receiveData {
+    margin-bottom: 2rem;
+    width: 80%;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #81b29a;
+    border-radius: .5rem;
+}
+
+.library {
+    display: none;
+    margin-bottom: 2rem;
+    width: 80%;
+    padding: 1.5rem;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f2cc8f;
+    border-radius: .5rem;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.labelText {
+    margin-bottom: .8rem;
+    font-weight: bold;
+}
+
+.input-textToEncrypt {
+    border-radius: .5rem;
+    border-color: #f4f1de;
+    border-style: solid;
+    padding: .2rem .5rem;
+    background-color: #f4f1de;
+    width: 50%;
+    margin-right: .5rem;
+}
+
+.input-textToEncrypt:focus {
+    outline: none;
+    border-color: #81b29a;
+}
+
+.submit-textToEncrypt {
+    background-color: #3d405b;
+    border-radius: .5rem;
+    border-color: #3d405b;
+    border-style: solid;
+    padding: 0.2rem 0.5rem;
+    color: #f2cc8f;
+    cursor: pointer;
+}
+
+.containerForTextToEncrypt {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerForEncrypted {
+    display: flex;
+    width: 90%;
+    height: 1.4rem;
+    padding: .5rem .5rem;
+    background-color: #f2cc8f;
+    border-radius: .5rem;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.iconStyles {
+    position: absolute;
+    right: 0.5rem;
+    top:0.4rem;
+    background-color: #f4f1de;
+    border-radius: .5rem;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.encryptedText  {
+    max-width: 80%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: .2rem;
+}
+
+.encryptedText::-webkit-scrollbar-track
+{
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
+    background-color: #F5F5F5;
+}
+
+.encryptedText::-webkit-scrollbar
+{
+    height: 0.2rem;
+}
+
+.encryptedText::-webkit-scrollbar-thumb
+{
+    background-color: #e07a5f;
+}
+
+.librarySection {
+    display: flex;
+    width: 100%;
+}
+
+.decrypted {
+    width: 50%;
+}
+
+.encrypted {
+    width: 50%;
+}
