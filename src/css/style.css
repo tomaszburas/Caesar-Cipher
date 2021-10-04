@@ -12,7 +12,7 @@ body {
     color: #3d405b;
 }
 
-.mainHeader {
+.header_container {
     width: 80%;
     display: flex;
     align-items: center;
@@ -20,14 +20,20 @@ body {
     margin: 2rem 0;
 }
 
-main {
+.header_title {
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.main_container {
     width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.provideData {
+.main_provide-data {
     margin: 2rem 0;
     width: 80%;
     padding: 1.5rem;
@@ -38,7 +44,7 @@ main {
     border-radius: .5rem;
 }
 
-.receiveData {
+.main_receive-data {
     margin-bottom: 2rem;
     width: 80%;
     padding: 1.5rem;
@@ -49,7 +55,7 @@ main {
     border-radius: .5rem;
 }
 
-.library {
+.main_library {
     display: none;
     margin-bottom: 2rem;
     width: 80%;
@@ -60,18 +66,12 @@ main {
     border-radius: .5rem;
 }
 
-h1 {
-    font-family: 'Lobster', cursive;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.labelText {
+.main_header-text {
     margin-bottom: .8rem;
     font-weight: bold;
 }
 
-.input-textToEncrypt {
+.main_input {
     border-radius: .5rem;
     border-color: #f4f1de;
     border-style: solid;
@@ -81,12 +81,12 @@ h1 {
     margin-right: .5rem;
 }
 
-.input-textToEncrypt:focus {
+.main_input:focus {
     outline: none;
     border-color: #81b29a;
 }
 
-.submit-textToEncrypt {
+.main_btn {
     background-color: #3d405b;
     border-radius: .5rem;
     border-color: #3d405b;
@@ -96,13 +96,13 @@ h1 {
     cursor: pointer;
 }
 
-.containerForTextToEncrypt {
+.main_container-encrypt {
     width: 90%;
     display: flex;
     justify-content: center;
 }
 
-.containerForEncrypted {
+.main_container-encrypted {
     display: flex;
     width: 90%;
     height: 1.4rem;
@@ -124,38 +124,58 @@ h1 {
     cursor: pointer;
 }
 
-.encryptedText  {
+.main_encrypted-text  {
     max-width: 80%;
     overflow-x: auto;
     overflow-y: hidden;
     padding-bottom: .2rem;
 }
 
-.encryptedText::-webkit-scrollbar-track
+.main_encrypted-text::-webkit-scrollbar-track
 {
     /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);*/
     background-color: #F5F5F5;
 }
 
-.encryptedText::-webkit-scrollbar
+.main_encrypted-text::-webkit-scrollbar
 {
     height: 0.2rem;
 }
 
-.encryptedText::-webkit-scrollbar-thumb
+.main_encrypted-text::-webkit-scrollbar-thumb
 {
     background-color: #e07a5f;
 }
 
-.librarySection {
+.main_container-library {
     display: flex;
     width: 100%;
 }
 
-.decrypted {
-    width: 50%;
+.main_container-decrypted-box {
+    width: 40%;
 }
 
-.encrypted {
-    width: 50%;
+.main_container-encrypted-box {
+    width: 40%;
+}
+
+.main_container-box {
+    width: 10%;
+}
+
+.main_library-header-text {
+    padding-bottom: 0.5rem;
+}
+
+.liRemove {
+    display:flex;
+    justify-content: center;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.liStyles {
+    padding: .2rem 0;
+    margin: .1rem 0;
 }

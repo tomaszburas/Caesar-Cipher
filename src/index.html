@@ -10,36 +10,41 @@
     <title>Cesar Cipher</title>
 </head>
 <body>
-    <header class="mainHeader">
-        <h1>Cesar Cipher</h1>
-        <p class="description">ROT13 encryption script 🔥</p>
+    <header class="header_container">
+        <h1 class="header_title">Cesar Cipher</h1>
+        <p class="header_description">ROT13 encryption script 🔥</p>
     </header>
 
-    <main>
-        <div class="provideData">
-            <p class="labelText">Enter the text to be encrypted</p>
-            <div class="containerForTextToEncrypt">
-                <input type="text" class="input-textToEncrypt" placeholder="your secret...">
-                <input type="submit" value="Encrypt" class="submit-textToEncrypt">
+    <main class="main_container">
+        <div class="main_provide-data">
+            <p class="main_header-text">Enter the text to be encrypted</p>
+            <div class="main_container-encrypt">
+                <input type="text" class="main_input" placeholder="your secret...">
+                <input type="submit" value="Encrypt" class="main_btn">
             </div>
         </div>
 
-        <div class="receiveData">
-            <p class="labelText">Encrypted Text</p>
-            <div class="containerForEncrypted">
-                <p class="encryptedText"></p>
+        <div class="main_receive-data">
+            <p class="main_header-text">Encrypted Text</p>
+            <div class="main_container-encrypted">
+                <p class="main_encrypted-text"></p>
             </div>
         </div>
 
-        <div class="library">
-            <p class="labelText">Library</p>
-            <div class="librarySection">
-                <div class="decrypted">
-                    <header class="lib">Decrypted</header>
+        <div class="main_library">
+            <p class="main_header-text">Library</p>
+            <div class="main_container-library">
+                <div class="main_container-box main_container-box-numbers">
+                    <header class="main_library-header-text">no.</header>
                 </div>
-                <div class="encrypted">
-                    <header class="lib">Encrypted</header>
+                <div class="main_container-decrypted-box">
+                    <header class="main_library-header-text">Decrypted</header>
                 </div>
+                <div class="main_container-encrypted-box">
+                    <header class="main_library-header-text">Encrypted</header>
+                </div>
+                <div class="main_container-box main_container-box-actions">
+                    <header class="main_library-header-text">action</header>
             </div>
         </div>
     </main>
