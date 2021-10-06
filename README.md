@@ -4,6 +4,6 @@ The Caesar cipher (shift cipher) is a simple and popular data encryption techniq
 ### Technologies used in Caesar Cipher:
 * javascript
 
-LIVE: [caesar-cipher1.netlify.app](caesar-cipher1.netlify.app "Caesar Cipher")
+LIVE: [caesar-cipher1.netlify.app](https://caesar-cipher1.netlify.app/ "Caesar Cipher")
 
 ![CC](https://i.imgur.com/nIqfAZy.jpg)
