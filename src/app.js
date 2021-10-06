@@ -8,6 +8,8 @@ import {
   mainContainer,
 } from './js/constants.js';
 
+const elementsInLibrary = loadFromLocalStorage() || [];
+
 function saveToLocalStorage(elements) {
   localStorage.setItem('library', JSON.stringify(elements));
 }
@@ -15,8 +17,6 @@ function saveToLocalStorage(elements) {
 function loadFromLocalStorage() {
   return JSON.parse(localStorage.getItem('library'));
 }
-
-const elementsInLibrary = loadFromLocalStorage() || [];
 
 function sortElements() {
   const arrDecrypted = [];
@@ -68,16 +68,15 @@ function addItem(elements) {
 function removeItem(id, elements) {
   if (elements === elementsInLibrary) {
     elements.splice(id - 1, 1);
-    saveToLocalStorage(elements);
   } else {
-    elements.splice(id - 1, 1);
-
     for (const arr of elementsInLibrary) {
-      if (arr.decrypted === elements[id].decrypted) {
-        elementsInLibrary.splice(arr.num, 1);
+      if (arr.decrypted === elements[id - 1].decrypted) {
+        elementsInLibrary.splice(arr.num - 1, 1);
       }
     }
+    elements.splice(id - 1, 1);
   }
+  saveToLocalStorage(elementsInLibrary);
 
   if (!elements.length) {
     containerForLibrary.style.display = 'none';
