@@ -2,7 +2,7 @@
   "name": "caesar-cipher",
   "version": "1.0.0",
   "description": "",
-  "main": "public/app.js",
+  "main": "src/app.js",
   "keywords": [],
   "author": "",
   "license": "ISC",
