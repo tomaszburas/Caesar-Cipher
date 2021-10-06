@@ -1,4 +1,4 @@
-import { cesar13 } from './js/functions';
+import { cesar13 } from './js/functions.js';
 import {
   textToEncrypt,
   btnEncrypt,
@@ -6,7 +6,7 @@ import {
   containerForEncrypted,
   containerForLibrary,
   mainContainer,
-} from './js/constants';
+} from './js/constants.js';
 
 function saveToLocalStorage(elements) {
   localStorage.setItem('library', JSON.stringify(elements));
