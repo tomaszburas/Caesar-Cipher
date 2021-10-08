@@ -1,22 +1,13 @@
-import { cesar13 } from './js/functions.js';
-import {
-  textToEncrypt,
-  btnEncrypt,
-  encryptedText,
-  containerForEncrypted,
-  containerForLibrary,
-  mainContainer,
-} from './js/constants.js';
+import { cesar13, saveToLocalStorage, loadFromLocalStorage } from './js/functions.js';
 
-const elementsInLibrary = loadFromLocalStorage() || [];
+const textToEncrypt = document.querySelector('.main_input');
+const btnEncrypt = document.querySelector('.main_btn');
+const encryptedText = document.querySelector('.main_encrypted-text');
+const containerForEncrypted = document.querySelector('.main_container-encrypted');
+const containerForLibrary = document.querySelector('.main_library');
+const mainContainer = document.querySelector('.main_container');
 
-function saveToLocalStorage(elements) {
-  localStorage.setItem('library', JSON.stringify(elements));
-}
-
-function loadFromLocalStorage() {
-  return JSON.parse(localStorage.getItem('library'));
-}
+const elementsInLibrary = loadFromLocalStorage('library') || [];
 
 function sortElements() {
   const arrDecrypted = [];
@@ -61,7 +52,7 @@ function addItem(elements) {
     decrypted: textToEncrypt.value,
     encrypted: encryptedText.textContent,
   });
-  saveToLocalStorage(elements);
+  saveToLocalStorage('library', elements);
   return elements;
 }
 
@@ -76,7 +67,7 @@ function removeItem(id, elements) {
     }
     elements.splice(id - 1, 1);
   }
-  saveToLocalStorage(elementsInLibrary);
+  saveToLocalStorage('library', elementsInLibrary);
 
   if (!elements.length) {
     containerForLibrary.style.display = 'none';

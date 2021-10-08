@@ -45,4 +45,16 @@ function cesar13(text) {
   return encryptArray.join('');
 }
 
-export { cesar13 };
+function saveToLocalStorage(name, elements) {
+  localStorage.setItem(name, JSON.stringify(elements));
+}
+
+function loadFromLocalStorage(name) {
+  return JSON.parse(localStorage.getItem(name));
+}
+
+export {
+  cesar13,
+  saveToLocalStorage,
+  loadFromLocalStorage,
+};
